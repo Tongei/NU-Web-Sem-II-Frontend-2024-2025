@@ -1,0 +1,6 @@
+:root{
+    --primary-color : #8A33FD;
+}
+.primary-color {
+    background: var(--primary-color);
+}
