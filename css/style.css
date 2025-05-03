@@ -1,6 +1,15 @@
-:root{
-    --primary-color : #8A33FD;
+:root {
+    --primary-color: #8A33FD;
 }
+
 .primary-color {
-    background: var(--primary-color);
+    background: var(--primary-color) !important;
+}
+
+.text-primary-color{
+    color: var(--primary-color) !important;
+}
+
+.border-primary-color{
+    border-color: var(--primary-color) !important;
 }
