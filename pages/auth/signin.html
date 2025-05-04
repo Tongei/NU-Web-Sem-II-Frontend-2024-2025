@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../../css/auth/signin.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container-fluid p-0 vh-100">
+        <!-- navbar -->
+        <div class="container p-0">
+            <nav class="navbar navbar-expand-lg p-0">
+                <div class="container-fluid p-0">
+                  <a class="navbar-brand p-3" href="#">
+                    <img src="../../assets/images/logo.png" alt="">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          English (United States)
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Khmer (KH)</a></li>
+                          <li><a class="dropdown-item" href="#">Chinese (CH)</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <button type="button" class="hvr-shadow btn-login hvr-border-fade btn primary-color text-white px-4">Login</button>
+                      </li>
+                      <li class="nav-item">
+                        <button type="button" class="hvr-bounce-to-right btn-signup btn border-1 border-primary-color text-primary-color px-4" id="btn-signup">Sign Up</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+          <!-- end-navbar -->   
+        <div class="container signin-content">
+            <div class="row h-100">
+                <div class="col-6 h-100 p-0 d-none d-sm-block">
+                    <div class="left-side h-100 w-100 img-left">
+                        <!-- img -->
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 h-100 main-right d-flex justify-content-center align-items-center">
+                    <div class="row right-side">
+                      <h1 class="">Sign In</h1>
+                      <div class="col-12 mt-4">
+                        <div class="input-social d-flex flex-column gap-3">
+                          <button class="w-100 border-1 bg-transparent google-btn py-2 rounded-3">
+                            <img src="../../assets/images/auth/google.png" alt="" class="me-2"> <span class="text-primary-color fw-semibold">Continue with Google</span>
+                          </button>
+                          <button class="w-100 border-1 bg-transparent google-btn py-2 rounded-3">
+                            <img src="../../assets/images/auth/twitter.png" alt="" class="me-2"> <span class="text-primary-color fw-semibold">Continue with X</span>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- line or -->
+                      <div class="line-with-text my-5">
+                        <div class="line"></div>
+                        <span class="text">OR</span>
+                        <div class="line"></div>
+                      </div>
+                      <div class="col-12">
+                        <form class="row gap-3 needs-validation d-flex" novalidate>
+                          <div class="col-12">
+                            <label for="validationTooltip01" class="form-label">Username or Email address</label>
+                            <input type="text" class="form-control py-2 border-input" id="validationTooltip01" placeholder="eg. email@gmail.com" value="" required>
+                            <div class="invalid-feedback">
+                              Username or Email address is required!
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <label for="validationTooltip02" class="form-label">Password</label>
+                            <label for="" id="sh-pass" class="float-end"><i id="eye" class="fa-solid fa-eye-slash"></i> <span id="sh-text">Hide</span></label>
+                            <input type="password" class="form-control py-2 border-input" id="validationTooltip02" placeholder="eg. *********" value="" required>
+                            <div class="invalid-feedback">
+                              Password is required!
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <span class="float-end"><a href="./reset-password.html" class="text-secondary">Forget your password</a></span>
+                          </div>
+                          <div class="col-12 mt-2 mb-4">
+                            <button class="hvr-shadow btn primary-color text-white px-4" type="submit">Login</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-12">
+                        <span>Don't have an account? <a href="./signup.html" class="d-inline-block text-secondary">Sign Up</a></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+      (() => {
+        'use strict'
+    
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+    
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+
+        // show-hide pass
+        document.querySelector("#sh-pass").onclick = () => {
+          let eye = document.querySelector("#eye");
+          let shText = document.querySelector("#sh-text");
+          let password = document.querySelector("#validationTooltip02");
+
+          if (password.getAttribute("type") === "password") {
+            password.setAttribute("type", "text"); // Use setAttribute to change the type
+            shText.innerHTML = "Show";
+            eye.classList.add("fa-eye");
+            eye.classList.remove("fa-eye-slash");
+          } else {
+            password.setAttribute("type", "password"); // Use setAttribute to change it back
+            shText.innerHTML = "Hide";
+            eye.classList.remove("fa-eye");
+            eye.classList.add("fa-eye-slash");
+          }
+        };
+
+        document.querySelector("#btn-signup").onclick = () => {
+          location.href = "/pages/auth/signup.html";
+          return;
+       }
+
+      })()
+    </script>
+    <!-- <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script> -->
+</body>
+</html>
