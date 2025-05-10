@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Euphoria - Fashion Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/fc70647351.js" crossorigin="anonymous"></script>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f8fa;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #2acbd0;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      padding: 1rem 2rem;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo h1 {
+      color: #2acbd0;
+      font-size: 1.8rem;
+      margin-left: 30px;
+    }
+
+    .logo span {
+      color: #333;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: all 0.4s ease;
+    }
+
+    .nav-menu ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 8px 14px;
+      border-radius: 25px;
+      border: none;
+      background-color: #f0f0f0;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .search-bar input:focus {
+      box-shadow: 0 0 5px #2acbd0;
+    }
+
+    .icon {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icon p {
+      margin: 0;
+      padding: 8px;
+      background-color: #f0f0f0;
+      border-radius: 30%;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .icon p:hover {
+      background-color: #2acbd0;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        padding-top: 1rem;
+        background-color: white;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .icon {
+        display: none;
+      }
+
+      .nav-menu ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 5%;
+    }
+
+    .hero-banner {
+      text-align: center;
+      padding: 60px 20px;
+      background-image: url(../assets/images/item.png);
+    }
+
+    .hero-banner h4,
+    .hero-banner h1,
+    .hero-banner p {
+      margin: 10px 0;
+    }
+
+    .hero-banner button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #2acbd0;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .promo-box,
+    .product-card,
+    .savings-item,
+    .category-card,
+    .limelight-card,
+    .feedback-card {
+      padding: 20px;
+      background: #fff;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .promotions,
+    .product-grid,
+    .savings-grid,
+    .category-grid,
+    .brands,
+    .limelight-grid,
+    .feedback-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .brands img {
+      width: 100px;
+      height: auto;
+    }
+
+    /* Footer */
+    .footer {
+      width: 100%;
+      color: aliceblue;
+      background-color: #213448;
+      padding: 40px 0;
+    }
+
+    .footer-info {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-info > div {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-info h2 {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    .footer-info p {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #aeadad;
+    }
+
+    .download-app {
+      width: 90%;
+      margin: 30px auto;
+      text-align: right;
+    }
+
+    .download-app h2 {
+      font-size: 25px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .icon p {
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #191515;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      color: white;
+      margin: 20px 0 0 5%;
+      font-size: 20px;
+    }
+
+    hr {
+      width: 90%;
+      margin: 10px auto;
+      border: 1px solid #ffffff30;
+    }
+
+    #resered {
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <h1>Eup<span>horia</span></h1>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Combos</a></li>
+        <li><a href="#">Joggers</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
+      <div class="icon">
+        <p><i class="fa-regular fa-heart"></i></p>
+        <p><i class="fa-solid fa-user"></i></p>
+        <p><i class="fa-solid fa-cart-shopping"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sections (Hero, Promotions, Products, etc.) go here -->
+<!-- Hero Banner -->
+<section class="hero-banner">
+    <div class="hero-content">
+      <h4>T-Shirt / Tops</h4>
+      <h1>Summer Value Pack</h1>
+      <p>cool / colorful / comfy</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+  
+  <!-- Promotions -->
+  <section class="promotions">
+    <div class="promo-box">High Coziness<br><small>Explore Now!</small></div>
+    <div class="promo-box">Breezy Summer Style<br><small>Explore Item</small></div>
+  </section>
+  
+  <!-- New Arrivals -->
+  <section class="new-arrivals">
+    <h2>New Arrival</h2>
+    <div class="product-grid">
+      <!-- Repeat for each item -->
+      <div class="product-card">Graphic T-Shirt</div>
+      <div class="product-card">Rugged Jeans</div>
+      <div class="product-card">Sports Jacket</div>
+      <div class="product-card">Shorts</div>
+    </div>
+  </section>
+  
+  <!-- Big Saving Zone -->
+  <section class="big-savings">
+    <h2>Big Saving Zone</h2>
+    <div class="savings-grid">
+      <div class="savings-item">Hawaiian Shirt</div>
+      <div class="savings-item">Printed T-shirt</div>
+      <div class="savings-item">Cargo Joggers</div>
+      <div class="savings-item">Urban Shirts</div>
+      <div class="savings-item">Oversized T-Shirts</div>
+    </div>
+  </section>
+  
+  <!-- Categories For Men -->
+  <section class="categories-men">
+    <h2>Categories For Men</h2>
+    <div class="category-grid">
+      <div class="category-card">Shirts</div>
+      <div class="category-card">Printed T-Shirts</div>
+      <div class="category-card">Plain T-Shirts</div>
+      <div class="category-card">Polo T-Shirts</div>
+    </div>
+  </section>
+  
+  <!-- Categories For Women -->
+  <section class="categories-women">
+    <h2>Categories For Women</h2>
+    <div class="category-grid">
+      <div class="category-card">Sweatshirts</div>
+      <div class="category-card">Tops</div>
+      <div class="category-card">Jeans</div>
+      <div class="category-card">Shorts</div>
+    </div>
+  </section>
+  
+  <!-- Top Brands -->
+  <section class="top-brands">
+    <h2>Top Brands Deal</h2>
+    <div class="brands">
+      <img src="../assets/images/item.png" alt="Nike" />
+      <img src="/Users/muyyisrors/Documents/NU/Web/assignemnt/NU-Web-Sem-II-Frontend-2024-2025/assets/images/item.png" alt="H&M" />
+      <img src="/Users/muyyisrors/Documents/NU/Web/assignemnt/NU-Web-Sem-II-Frontend-2024-2025/assets/images/item.png" alt="Levis" />
+      <img src="/Users/muyyisrors/Documents/NU/Web/assignemnt/NU-Web-Sem-II-Frontend-2024-2025/assets/images/item.png" alt="Puma" />
+    </div>
+  </section>
+  
+  <!-- In the Limelight -->
+  <section class="limelight">
+    <h2>In The Limelight</h2>
+    <div class="limelight-grid">
+      <div class="limelight-card">Hoodie</div>
+      <div class="limelight-card">Sweatshirt</div>
+      <div class="limelight-card">Color Pop Tee</div>
+    </div>
+  </section>
+  
+  <!-- Feedback -->
+  <section class="feedback">
+    <h2>Feedback</h2>
+    <div class="feedback-grid">
+      <div class="feedback-card">
+        <p>"Great quality and quick delivery!"</p>
+        <strong>— Riya</strong>
+      </div>
+      <div class="feedback-card">
+        <p>"Love the styles and service."</p>
+        <strong>— Ronald</strong>
+      </div>
+      <div class="feedback-card">
+        <p>"The app is super convenient."</p>
+        <strong>— Savannah</strong>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-info">
+      <div class="Need-help">
+        <h2>Need Help</h2>
+        <p>Contact Us</p>
+        <p>Track Order</p>
+        <p>Returns & Refunds</p>
+        <p>FAQ's</p>
+        <p>Career</p>
+      </div>
+      <div class="Company">
+        <h2>Company</h2>
+        <p>About Us</p>
+        <p>Euphoria Blog</p>
+        <p>Euphoriastan</p>
+        <p>Collaboration</p>
+        <p>Media</p>
+      </div>
+      <div class="More-Info">
+        <h2>More Info</h2>
+        <p>Terms and Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Shipping Policy</p>
+        <p>Sitemap</p>
+      </div>
+      <div class="Location">
+        <h2>Location</h2>
+        <p>123 Fashion Ave</p>
+        <p>Style City, SC 90210</p>
+      </div>
+    </div>
+    <hr />
+    <h3>Download Our App</h3>
+    <div class="download-app">
+      <div class="icon">
+        <p><i class="fab fa-apple"></i> App Store</p>
+        <p><i class="fab fa-google-play"></i> Google Play</p>
+      </div>
+    </div>
+    <p id="resered">&copy; 2025 Euphoria. All rights reserved.</p>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
