@@ -7,6 +7,31 @@
     border: solid 0.5px ;
 }
 
+
+:root {
+    --primary-color: #8A33FD;
+}
+
+.primary-color {
+    background: var(--primary-color) !important;
+}
+
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+
+.border-primary-color {
+    border-color: var(--primary-color) !important;
+}
+.btn-hover:hover {
+    outline: 1px solid var(--primary-color);
+    transition: .3s;
+}
+
+.btn-outline-light {
+    outline: 1px solid white;
+}
+
 .hvr-shadow {
     display: inline-block;
     vertical-align: middle;
