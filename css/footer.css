@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* .container {
+    width: 100%;
+  } */
+
+  .footer {
+    width: 100%;
+    color: aliceblue;
+    background-color: #213448;
+    padding: 40px 0;
+  }
+
+  .footer-info {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-info > div {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+
+  .footer-info h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .footer-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #aeadad;
+  }
+
+  .download-app {
+    width: 90%;
+    margin: 30px auto;
+    text-align: right;
+  }
+
+  .download-app h2 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .icon p {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #191515;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    color: white;
+    margin: 20px 0 0 5%;
+    font-size: 20px;
+  }
+
+  hr {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid #ffffff30;
+  }
+
+  #resered {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .download-app {
+      text-align: center;
+    }
+
+    .icon {
+      justify-content: center;
+    }
+
+    h3 {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-info h2 {
+      font-size: 20px;
+    }
+
+    .footer-info p {
+      font-size: 16px;
+    }
+
+    .download-app h2 {
+      font-size: 18px;
+    }
+
+    .icon p {
+      font-size: 16px;
+      padding: 8px;
+    }
+
+    #resered {
+      font-size: 14px;
+    }
+  }

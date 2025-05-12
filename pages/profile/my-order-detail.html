@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Orders</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="../../vendor/bootstrap/js/bootstrap.bundle.min.js"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/profile/my-order.css">
+    
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Eup<span>horia</span></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Combos</a></li>
+                    <li><a href="#">Joggers</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icon">
+                    <p><i class="fa-regular fa-heart"></i></p>
+                    <p><i class="fa-solid fa-user"></i></p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+    </header>
+    <main class="add-address">
+        <div class="container py-4">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">My Account</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Delivery Address</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <!-- Left Column - Sidebar -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h1 class="section-header h4 mb-2">Hello Jhanvi</h1>
+                    <p class="welcome-text mb-4">Welcome to your Account</p>
+
+                    <div class="sidebar mb-4">
+                        <a href="#" class="sidebar-link active-menu">
+                            <i class="bi bi-box-seam menu-icon"></i> My orders
+                        </a>
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-heart menu-icon"></i> Wishlist
+                        </a>
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-person menu-icon"></i> My info
+                        </a>
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-box-arrow-right menu-icon"></i> Sign out
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="col-lg-9">
+                    <h2 class="section-header mb-4"> <span><i class="fa-solid fa-chevron-left"></i></span> Orders Detail</h2>
+                    <div class="col-12">
+                        <div class="p-3 content rounded-3">
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <p class="title-order">
+                                        <span class="fs-5">Order n:#12345674</span> <br>
+                                        <span class="text-secondary">Place on 2 June, 2025 2:40PM</span>
+                                    </p>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div class="">
+                                        <span class="text-secondary fs-5">Total: <b>$58.00</b></span> <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 py-5">
+                        <div id="form-wrapper">
+                            <form action="/p/quote.php" method="GET">
+                                <div id="debt-amount-slider">
+                                    <input type="radio" name="debt-amount" id="1" value="1" required>
+                                    <label for="1" data-debt-amount="In Progressed"></label>
+                                    <input type="radio" name="debt-amount" id="2" value="2" required>
+                                    <label for="2" data-debt-amount="Progressed"></label>
+                                    <input type="radio" name="debt-amount" id="3" value="3" required>
+                                    <label for="3" data-debt-amount="Shipped"></label>
+                                    <input type="radio" name="debt-amount" id="4" value="4" required>
+                                    <label for="4" data-debt-amount="Delivered"></label>    
+                                    <div id="debt-amount-pos"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0 m-0 d-flex justify-content-center mb-5 mt-2">
+                        <div class="w-75 p-3 content rounded-3">
+                            <p><span class="text-secondary me-3">8 June 2025 2:40PM</span><span class="">Your order's been successful verified!</span></p>
+                        </div>
+                    </div>
+                    <div class="row content rounded-3 mb-5">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-sm-7 col-12 d-sm-block d-flex justify-content-center align-items-center">
+                                    <div class="row p-4">
+                                        <div class="col-sm-4 col-12  d-sm-block d-flex justify-content-center align-items-center">
+                                            <img src="../../assets/images/item.png" alt="Blue Flower Print Crop Top" class="order-detail-img">
+                                        </div>
+                                        <div class="col-sm-8 col-12 d-flex justify-content-start align-items-center fs-5  d-sm-block d-flex justify-content-center align-items-center">
+                                            <div class="">
+                                                <p>Printed white cot</p>
+                                                <p>Color: <span class="text-secondary">White</span></p>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-12 d-sm-block d-flex justify-content-center align-items-center">
+                                    <div class="row">
+                                        <div class="col-12 mt-5 fw-light fs-5">
+                                            <div><span class="me-3">QTY: 1</span> <span>Price: $29.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 col-12 p-4 fs-3 d-sm-block d-flex justify-content-center align-items-center">
+                                    <div><i class="fa-solid fa-xmark"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-auto bg-secondary my-3" style="height: 0.3px; width: 90%;"></div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-sm-7 col-12 d-sm-block d-flex justify-content-center align-items-center">
+                                    <div class="row p-4">
+                                        <div class="col-sm-4 col-12  d-sm-block d-flex justify-content-center align-items-center">
+                                            <img src="../../assets/images/item.png" alt="Blue Flower Print Crop Top" class="order-detail-img">
+                                        </div>
+                                        <div class="col-sm-8 col-12 d-flex justify-content-start align-items-center fs-5  d-sm-block d-flex justify-content-center align-items-center">
+                                            <div class="">
+                                                <p>Printed white cot</p>
+                                                <p>Color: <span class="text-secondary">White</span></p>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-12 d-sm-block d-flex justify-content-center align-items-center">
+                                    <div class="row">
+                                        <div class="col-12 mt-5 fw-light fs-5">
+                                            <div><span class="me-3">QTY: 1</span> <span>Price: $29.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 col-12 p-4 fs-3 d-sm-block d-flex justify-content-center align-items-center">
+                                    <div><i class="fa-solid fa-xmark"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-info">
+                <div class="Need-help">
+                    <h2>Need Help</h2>
+                    <p>Contact Us</p>
+                    <p>Track Order</p>
+                    <p>Returns & Refunds</p>
+                    <p>FAQ's</p>
+                    <p>Career</p>
+                </div>
+
+                <div class="Company">
+                    <h2>Company</h2>
+                    <p>About Us</p>
+                    <p>Euphoria Blog</p>
+                    <p>Euphoriastan</p>
+                    <p>Collaboration</p>
+                    <p>Media</p>
+                </div>
+
+                <div class="More Info">
+                    <h2>More Info</h2>
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Shipping Policy</p>
+                    <p>Sitemap</p>
+                </div>
+
+                <div class="Location">
+                    <h2>Location</h2>
+                    <p>support@euphoria.in</p>
+                    <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+                    <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+                </div>
+            </div>
+
+            <div class="download-app">
+                <h2>Download The App</h2>
+                <div class="icon">
+                    <p><i class="fa-brands fa-facebook"></i></p>
+                    <p><i class="fa-brands fa-google-play"></i></p>
+                    <p><i class="fa-brands fa-square-twitter"></i></p>
+                    <p><i class="fa-brands fa-linkedin"></i></p>
+                </div>
+            </div>
+
+            <hr />
+            <h3>Popular</h3><br />
+            <h3>Categories</h3>
+            <hr />
+            <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fc70647351.js" crossorigin="anonymous"></script></body>
+
+</html>
