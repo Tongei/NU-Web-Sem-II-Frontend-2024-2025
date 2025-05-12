@@ -70,7 +70,7 @@
 
 .signin-content{
     /* height: 89.5% !important; */
-    height: 93.2vh !important;
+    height: 90vh !important;
 }
 
 .signin-content .main-right{
@@ -89,7 +89,7 @@
 
 @media (min-width : 769px) {
   .right-side{
-    padding: 100px 80px !important;
+    padding: 80px 80px !important;
   }
 }
 
