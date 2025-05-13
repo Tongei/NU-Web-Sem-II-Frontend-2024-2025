@@ -1,15 +1,8 @@
 :root {
     --primary-color: #8A33FD;
 }
-
-
 .btn-login:hover{
     border: solid 0.5px ;
-}
-
-
-:root {
-    --primary-color: #8A33FD;
 }
 
 .primary-color {

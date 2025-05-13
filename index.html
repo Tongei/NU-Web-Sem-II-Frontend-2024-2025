@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora - Fashion Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <style>
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Eup<span>horia</span></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Combos</a></li>
+                    <li><a href="#">Joggers</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="">
+                    <button type="button" id="btn-login" class="hvr-bounce-to-right btn-signup btn border-1 border-primary-color text-primary-color">Login</button>
+                    <button type="button" class="hvr-shadow btn-login hvr-border-fade btn primary-color text-white">Sign Up</button> 
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero  hero-banner">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-subtitle">T-Shirt / Tops</p>
+        <h1 class="hero-title">Summer Value Pack</h1>
+        <p class="hero-description">cool / colorful / comfy</p>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+      <div class="hero-nav mt-5">
+        <button class="hero-nav-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-nav-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features container"> 
+    <div class="features-grid">
+      <div class="feature-card">
+        <p class="feature-subtitle">Deal of the day</p>
+        <h3 class="feature-title">High Cuteness High Attitude</h3>
+        <a href="../assets/images/homepage/SAD Ecom Image.jpg" class="feature-link">Shop Now</a>
+      </div>
+      <div class="feature-card">
+        <p class="feature-subtitle">Limited time only</p>
+        <h3 class="feature-title">Breezy Summer Style</h3>
+        <a href="#" class="feature-link">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals Section -->
+  <section class="new-arrivals container">
+    <div class="section-heading">
+      <h2>New Arrival</h2>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="../assets/images/homepage/1.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Stylish Handbag</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/2.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Polo Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/3.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Women's T-Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/4.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Urban Shirts</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Saving Zone -->
+  <section class="saving-zone container">
+    <div class="section-heading">
+      <h2>Big Saving Zone</h2>
+    </div>
+    <div class="saving-grid">
+      <div class="saving-card blue">
+        <div>
+          <p class="saving-subtitle">Discount</p>
+          <h3 class="saving-title">Hawaiian Shirts</h3>
+        </div>
+        <a href="#" class="saving-btn">Shop Now</a>
+      </div>
+      <div class="saving-card pink">
+        <div>
+          <p class="saving-subtitle">Limited Offer</p>
+          <h3 class="saving-title">Printed Shirts</h3>
+        </div>
+        <a href="#" class="saving-btn">Shop Now</a>
+      </div>
+      <div class="saving-card green">
+        <div>
+          <p class="saving-subtitle">New Season</p>
+          <h3 class="saving-title">Cargo Trousers</h3>
+        </div>
+        <a href="#" class="saving-btn">Shop Now</a>
+      </div>
+      <div class="saving-card beige">
+        <div>
+          <p class="saving-subtitle">Summer Collection</p>
+          <h3 class="saving-title">Printed T-Shirts</h3>
+        </div>
+        <a href="#" class="saving-btn">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto Section -->
+  <section class="manifesto container">
+    <div class="manifesto-image">
+      <h3>WE MADE YOUR EVERYDAY FASHION BETTER!</h3>
+      <p>We focus on creating premium clothing with the best materials while being affordable for everyone.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+    <div class="manifesto-models">
+      <img src="../assets/images/homepage/Rectangle 13 from SAD-Ecom.png" alt="Fashion models">
+    </div>
+  </section>
+
+  <!-- Categories For Men -->
+  <section class="categories container">
+    <div class="section-heading">
+      <h2>Categories For Men</h2>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="../assets/images/homepage/Rectangle 20 from SAD-Ecom.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/Rectangle 21 from SAD-Ecom.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Printed T-Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/plantT.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Plain T-Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/poloT.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Polo T-Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/hood.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Hoodies</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/jeans.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Jeans</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/blackie.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Activewear</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/vest.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Boxers</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories For Women -->
+  <section class="categories container">
+    <div class="section-heading">
+      <h2>Categories For Women</h2>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="../assets/images/homepage/sweet.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Hoodies & Sweaters</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/coat.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Coats & Parkas</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/tee.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Tees & T-Shirts</h3>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="../assets/images/homepage/boxers.png" alt="Product" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">Boxers</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Brands -->
+  <section class="brands">
+    <div class="container">
+      <h3>Top Brands Deal</h3>
+      <p>Up to 60% off on brands</p>
+      <div class="brands-logos">
+        <img src="../assets/images/homepage/nike.png" alt="Nike" class="brand-logo">
+        <img src="../assets/images/homepage/logos.png" alt="H&M" class="brand-logo">
+        <img src="../assets/images/homepage/levis.png" alt="Levis" class="brand-logo">
+        <img src="../assets/images/homepage/polo.png" alt="Adidas" class="brand-logo">
+        <img src="../assets/images/homepage/puma.png" alt="Puma" class="brand-logo">
+      </div>
+    </div>
+  </section>
+  </section>
+
+  <!-- In The Spotlight -->
+  <section class="spotlight container">
+    <div class="section-heading">
+      <h2>In The Limelight</h2>
+    </div>
+    <div class="spotlight-grid">
+      <div class="spotlight-card">
+        <div class="spotlight-img">
+          <img src="../assets/images/homepage/blackHood.png" alt="Fashion item">
+        </div>
+        <div class="spotlight-heart">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-img">
+          <img src="../assets/images/homepage/linepattern.png" alt="Fashion item">
+        </div>
+        <div class="spotlight-heart">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-img">
+          <img src="../assets/images/homepage/blackShorts.png" alt="Fashion item">
+        </div>
+        <div class="spotlight-heart">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-img">
+          <img src="../assets/images/homepage/lavender.png" alt="Fashion item">
+        </div>
+        <div class="spotlight-heart">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section class="feedback container m-auto">
+    <div class="section-heading">
+      <h2>Feedback</h2>
+    </div>
+    <div class="feedback-grid">
+      <div class="feedback-card">
+        <div class="feedback-header">
+          <div class="feedback-avatar">
+            <img src="../assets/images/homepage/jessi.png" alt="User">
+          </div>
+          <div class="feedback-user">
+            <h4>Jessica Smith</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <div class="feedback-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="feedback-text">Great quality items at an affordable price. The shipping was fast and the items were exactly as shown on the website.</p>
+      </div>
+      <div class="feedback-card">
+        <div class="feedback-header">
+          <div class="feedback-avatar">
+            <img src="../assets/images/homepage/mic.png" alt="User">
+          </div>
+          <div class="feedback-user">
+            <h4>Michael Roberts</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <div class="feedback-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <p class="feedback-text">I ordered several shirts and they all fit perfectly. The materials are comfortable and durable. Will definitely shop here again!</p>
+      </div>
+      <div class="feedback-card">
+        <div class="feedback-header">
+          <div class="feedback-avatar">
+            <img src="../assets/images/homepage/sama.png" alt="User">
+          </div>
+          <div class="feedback-user">
+            <h4>Samantha Nguyen</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <div class="feedback-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="feedback-text">Absolutely love the summer collection! The designs are trendy and the fabric quality exceeds expectations. Customer service was excellent too.</p>
+      </div>
+    </div>
+  </section>
+
+\]    <footer>
+    <div class="footer">
+        <div class="footer-info">
+            <div class="Need-help">
+                <h2>Need Help</h2>
+                <p>Contact Us</p>
+                <p>Track Order</p>
+                <p>Returns & Refunds</p>
+                <p>FAQ's</p>
+                <p>Career</p>
+            </div>
+
+            <div class="Company">
+                <h2>Company</h2>
+                <p>About Us</p>
+                <p>Euphoria Blog</p>
+                <p>Euphoriastan</p>
+                <p>Collaboration</p>
+                <p>Media</p>
+            </div>
+
+            <div class="More Info">
+                <h2>More Info</h2>
+                <p>Terms and Conditions</p>
+                <p>Privacy Policy</p>
+                <p>Shipping Policy</p>
+                <p>Sitemap</p>
+            </div>
+
+            <div class="Location">
+                <h2>Location</h2>
+                <p>support@euphoria.in</p>
+                <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+                <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+            </div>
+        </div>
+
+        <div class="download-app">
+            <h2>Download The App</h2>
+            <div class="icon">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-google-play"></i></p>
+                <p><i class="fa-brands fa-square-twitter"></i></p>
+                <p><i class="fa-brands fa-linkedin"></i></p>
+            </div>
+        </div>
+
+        <hr />
+        <h3>Popular</h3><br />
+        <h3>Categories</h3>
+        <hr />
+        <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/fc70647351.js" crossorigin="anonymous"></script>   
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      // Hero slider functionality
+      const heroSlider = {
+        currentSlide: 0,
+        slides: [
+          {
+            subtitle: 'T-Shirt / Tops',
+            title: 'Summer Value Pack',
+            description: 'cool / colorful / comfy',
+            backgroundColor: '#35b8be'
+          },
+          {
+            subtitle: 'New Collection',
+            title: 'Autumn Essentials',
+            description: 'warm / stylish / versatile',
+            backgroundColor: '#e57373'
+          },
+          {
+            subtitle: 'Limited Edition',
+            title: 'Designer Collaboration',
+            description: 'exclusive / trendy / unique',
+            backgroundColor: '#7986cb'
+          }
+        ],
+        init: function() {
+          this.bindEvents();
+        },
+        bindEvents: function() {
+          const prevBtn = document.querySelector('.hero-nav-btn:first-child');
+          const nextBtn = document.querySelector('.hero-nav-btn:last-child');
+          
+          prevBtn.addEventListener('click', () => {
+            this.navigate('prev');
+          });
+          
+          nextBtn.addEventListener('click', () => {
+            this.navigate('next');
+          });
+        },
+        navigate: function(direction) {
+          if (direction === 'next') {
+            this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+          } else {
+            this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+          }
+          
+          this.updateSlide();
+        },
+        updateSlide: function() {
+          const slide = this.slides[this.currentSlide];
+          const hero = document.querySelector('.hero');
+          const subtitle = document.querySelector('.hero-subtitle');
+          const title = document.querySelector('.hero-title');
+          const description = document.querySelector('.hero-description');
+          
+          // Update content with smooth transition
+          hero.style.transition = 'background-color 0.5s ease';
+          hero.style.backgroundColor = slide.backgroundColor;
+          
+          subtitle.textContent = slide.subtitle;
+          title.textContent = slide.title;
+          description.textContent = slide.description;
+        }
+      };
+      
+      // Initialize hero slider
+      heroSlider.init();
+      
+      // Product hover effect
+      const productCards = document.querySelectorAll('.product-card');
+      productCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-10px)';
+          this.style.transition = 'transform 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+      
+      // Heart icon toggle for spotlights
+      const heartIcons = document.querySelectorAll('.spotlight-heart');
+      heartIcons.forEach(icon => {
+        icon.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.classList.toggle('active');
+          
+          if (this.classList.contains('active')) {
+            this.style.backgroundColor = '#f8a1a8';
+            this.querySelector('i').style.color = '#fff';
+          } else {
+            this.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+            this.querySelector('i').style.color = '#f8a1a8';
+          }
+        });
+      });
+      
+      // Smooth scroll for navigation links
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Remove active class from all links
+          navLinks.forEach(item => {
+            item.classList.remove('active');
+          });
+          
+          // Add active class to clicked link
+          this.classList.add('active');
+          
+          // Scroll to section logic would go here
+        });
+      });
+    });
+  </script>
+</body>
+</html>
