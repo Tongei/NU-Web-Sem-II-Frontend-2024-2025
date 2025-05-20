@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Eup<span>horia</span></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="pt-3">
+                    <li><a href="./home_Page.html">Shop</a></li>
+                    <li><a href="./product-man.html">Men</a></li>
+                    <li><a href="./product-list.html">Women</a></li>
+                    <li><a href="#">Combos</a></li>
+                    <li><a href="#">Joggers</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icon">
+                    <p onclick="return location.href = './wishlist.html'"><i class="fa-regular fa-heart"></i></p>
+                    <p onclick="return location.href = './profile/my-order.html'"><i class="fa-solid fa-user"></i></p>
+                    <p onclick="return location.href = './card.html'"><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+    </header>
+    <main class="contact-detail">
+        <div class="container py-4">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">My Account</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Personal Info</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <!-- Left Column - Sidebar -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h1 class="section-header h4 mb-2">Hello Jhanvi</h1>
+                    <p class="welcome-text mb-4">Welcome to your Account</p>
+
+                    <div class="sidebar mb-4">
+                        <a href="./profile/my-order.html" class="sidebar-link">
+                            <i class="bi bi-box-seam menu-icon"></i> My orders
+                        </a>
+                        <a href="./wishlist.html" class="sidebar-link">
+                            <i class="bi bi-heart menu-icon"></i> Wishlist
+                        </a>
+                        <a href="./add-address.html" class="sidebar-link active-menu">
+                            <i class="bi bi-person menu-icon"></i> My info
+                        </a>
+                        <a href="./auth/signin.html" class="sidebar-link">
+                            <i class="bi bi-box-arrow-right menu-icon"></i> Sign out
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="col-lg-9">
+                    <h2 class="section-header h4 mb-4">My Info</h2>
+
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">Contact Details</h3>
+
+                            <div class="info-row">
+                                <div>
+                                    <div class="text-muted small">Your Name</div>
+                                    <div id="displayName">Jhanvi Shah</div>
+                                </div>
+                                <a class="change-btn" data-bs-toggle="modal" data-bs-target="#nameModal">Change</a>
+                            </div>
+
+                            <div class="info-row">
+                                <div>
+                                    <div class="text-muted small">Email Address</div>
+                                    <div id="displayEmail">Jhanvi@gmail.com</div>
+                                </div>
+                                <a class="change-btn" data-bs-toggle="modal" data-bs-target="#emailModal">Change</a>
+                            </div>
+
+                            <div class="info-row">
+                                <div>
+                                    <div class="text-muted small">Phone Number</div>
+                                    <div id="displayPhone">8980252445</div>
+                                </div>
+                                <a class="change-btn" data-bs-toggle="modal" data-bs-target="#phoneModal">Change</a>
+                            </div>
+
+                            <div class="info-row">
+                                <div>
+                                    <div class="text-muted small">Password</div>
+                                    <div>••••••••</div>
+                                </div>
+                                <a class="change-btn" data-bs-toggle="modal" data-bs-target="#passwordModal">Change</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="address-header">
+                        <h3 class="h5">Address</h3>
+                        <a class="add-new-btn" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                            <i class="bi bi-plus-circle"></i> Add New
+                        </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="address-card active" onclick="selectAddress(this)">
+                                <span class="badge-default">Default Billing</span>
+                                <h4 class="h6">Jhanvi shah</h4>
+                                <div class="text-muted small mb-2">8980252445</div>
+                                <div class="small mb-2">1/4 Pragatinagar Flats, opp. jain derasar, near Jain derasar,
+                                    Vijaynagar road</div>
+
+                                <div class="d-flex gap-2 mb-2">
+                                    <span class="address-type">Home</span>
+                                </div>
+
+                                <div class="address-actions">
+                                    <a data-bs-toggle="modal" data-bs-target="#removeAddressModal">Remove</a>
+                                    <a data-bs-toggle="modal" data-bs-target="#editAddressModal">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="address-card" onclick="selectAddress(this)">
+                                <span class="badge-default">Default Shipping</span>
+                                <h4 class="h6">Jhanvi shah</h4>
+                                <div class="text-muted small mb-2">8980252445</div>
+                                <div class="small mb-2">1/4 Pragatinagar Flats, opp. jain derasar, near Jain derasar,
+                                    Vijaynagar road</div>
+
+                                <div class="d-flex gap-2 mb-2">
+                                    <span class="address-type">Home</span>
+                                </div>
+
+                                <div class="address-actions">
+                                    <a data-bs-toggle="modal" data-bs-target="#removeAddressModal">Remove</a>
+                                    <a data-bs-toggle="modal" data-bs-target="#editAddressModal">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="address-card" onclick="selectAddress(this)">
+                                <div class="dropdown address-options">
+                                    <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check-circle"></i> Set as
+                                                default</a></li>
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                data-bs-target="#editAddressModal"><i class="bi bi-pencil"></i> Edit</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                data-bs-target="#removeAddressModal"><i class="bi bi-trash"></i>
+                                                Remove</a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="h6">Jhanvi shah</h4>
+                                <div class="text-muted small mb-2">8980252445</div>
+                                <div class="small mb-2">1/4 Pragatinagar Flats, opp. jain derasar, near Jain derasar,
+                                    Vijaynagar road</div>
+
+                                <div class="d-flex gap-2 mb-2">
+                                    <span class="address-type">Office</span>
+                                </div>
+
+                                <div class="address-actions">
+                                    <a data-bs-toggle="modal" data-bs-target="#removeAddressModal">Remove</a>
+                                    <a data-bs-toggle="modal" data-bs-target="#editAddressModal">Edit</a>
+                                    <a href="#" onclick="setAsDefault(this)">Set as default</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="address-card" onclick="selectAddress(this)">
+                                <div class="dropdown address-options">
+                                    <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-check-circle"></i> Set as
+                                                default</a></li>
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                data-bs-target="#editAddressModal"><i class="bi bi-pencil"></i> Edit</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                data-bs-target="#removeAddressModal"><i class="bi bi-trash"></i>
+                                                Remove</a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="h6">Jhanvi shah</h4>
+                                <div class="text-muted small mb-2">8980252445</div>
+                                <div class="small mb-2">1/4 Pragatinagar Flats, opp. jain derasar, near Jain derasar,
+                                    Vijaynagar road</div>
+
+                                <div class="d-flex gap-2 mb-2">
+                                    <span class="address-type">Home2</span>
+                                </div>
+
+                                <div class="address-actions">
+                                    <a data-bs-toggle="modal" data-bs-target="#removeAddressModal">Remove</a>
+                                    <a data-bs-toggle="modal" data-bs-target="#editAddressModal">Edit</a>
+                                    <a href="#" onclick="setAsDefault(this)">Set as default</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Name Modal -->
+        <div class="modal fade" id="nameModal" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="nameModalLabel">Change Name</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="edit-form" id="nameForm">
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" value="Jhanvi">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" value="Shah">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn save-btn text-white" onclick="addNewAddress()">Save
+                            Address</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Remove Address Modal -->
+        <div class="modal fade" id="removeAddressModal" tabindex="-1" aria-labelledby="removeAddressModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="removeAddressModalLabel">Remove Address</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to remove this address?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" onclick="removeAddress()">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-info">
+                <div class="Need-help">
+                    <h2>Need Help</h2>
+                    <p>Contact Us</p>
+                    <p>Track Order</p>
+                    <p>Returns & Refunds</p>
+                    <p>FAQ's</p>
+                    <p>Career</p>
+                </div>
+
+                <div class="Company">
+                    <h2>Company</h2>
+                    <p>About Us</p>
+                    <p>Euphoria Blog</p>
+                    <p>Euphoriastan</p>
+                    <p>Collaboration</p>
+                    <p>Media</p>
+                </div>
+
+                <div class="More Info">
+                    <h2>More Info</h2>
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Shipping Policy</p>
+                    <p>Sitemap</p>
+                </div>
+
+                <div class="Location">
+                    <h2>Location</h2>
+                    <p>support@euphoria.in</p>
+                    <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+                    <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+                </div>
+            </div>
+
+            <div class="download-app">
+                <h2>Download The App</h2>
+                <div class="icon">
+                    <p><i class="fa-brands fa-facebook"></i></p>
+                    <p><i class="fa-brands fa-google-play"></i></p>
+                    <p><i class="fa-brands fa-square-twitter"></i></p>
+                    <p><i class="fa-brands fa-linkedin"></i></p>
+                </div>
+            </div>
+
+            <hr />
+            <h3>Popular</h3><br />
+            <h3>Categories</h3>
+            <hr />
+            <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fc70647351.js" crossorigin="anonymous"></script>
+    <script>
+        // Global variables
+        let currentAddressElement = null;
+
+        // Function to handle name change
+        function saveName() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+
+            if (firstName && lastName) {
+                document.getElementById('displayName').textContent = firstName + ' ' + lastName;
+
+                // Close modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('nameModal'));
+                modal.hide();
+
+                // Show success toast
+                showToast('Name updated successfully!');
+            } else {
+                alert('Please fill in all fields');
+            }
+        }
+
+        // Function to handle email change
+        function saveEmail() {
+            const email = document.getElementById('email').value;
+
+            if (email && validateEmail(email)) {
+                document.getElementById('displayEmail').textContent = email;
+
+                // Close modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('emailModal'));
+                modal.hide();
+
+                // Show success toast
+                showToast('Email updated successfully!');
+            } else {
+                alert('Please enter a valid email address');
+            }
+        }
+
+        // Function to handle phone change
+        function savePhone() {
+            const phone = document.getElementById('phone').value;
+
+            if (phone) {
+                document.getElementById('displayPhone').textContent = phone;
+
+                // Close modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('phoneModal'));
+                modal.hide();
+
+                // Show success toast
+                showToast('Phone updated successfully!');
+            } else {
+                alert('Please enter a valid phone number');
+            }
+        }
+
+        // Function to handle password change
+        function savePassword() {
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (currentPassword && newPassword && confirmPassword) {
+                if (newPassword === confirmPassword) {
+                    // Close modal
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('passwordModal'));
+                    modal.hide();
+
+                    // Reset form
+                    document.getElementById('passwordForm').reset();
+
+                    // Show success toast
+                    showToast('Password updated successfully!');
+                } else {
+                    alert('New passwords do not match');
+                }
+            } else {
+                alert('Please fill in all fields');
+            }
+        }
+
+        // Function to save edited address
+        function saveAddress() {
+            // In a real application, you would save the address data to a database
+            // Here we'll just close the modal and show a success message
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('editAddressModal'));
+            modal.hide();
+
+            // Show success toast
+            showToast('Address updated successfully!');
+        }
+
+        // Function to add new address
+        function addNewAddress() {
+            // In a real application, you would save the new address to a database
+            // Here we'll just close the modal and show a success message
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('addAddressModal'));
+            modal.hide();
+
+            // Reset form
+            document.getElementById('newAddressForm').reset();
+
+            // Show success toast
+            showToast('New address added successfully!');
+        }
+
+        // Function to remove address
+        function removeAddress() {
+            // In a real application, you would remove the address from a database
+            // Here we'll just close the modal and show a success message
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('removeAddressModal'));
+            modal.hide();
+
+            // Show success toast
+            showToast('Address removed successfully!');
+        }
+
+        // Function to select an address
+        function selectAddress(element) {
+            // Store the current address element
+            currentAddressElement = element;
+
+            // Highlight selected address (for demo purposes)
+            document.querySelectorAll('.address-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Function to set address as default
+        function setAsDefault(element) {
+            event.stopPropagation(); // Prevent the parent onclick event from firing
+
+            // In a real application, you would update the default status in a database
+            // Here we'll just show a success message
+
+            // Show success toast
+            showToast('Default address updated successfully!');
+        }
+
+        // Function to validate email
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        // Function to show toast message
+        function showToast(message) {
+            // Create toast element
+            const toastContainer = document.createElement('div');
+            toastContainer.style.position = 'fixed';
+            toastContainer.style.bottom = '20px';
+            toastContainer.style.right = '20px';
+            toastContainer.style.zIndex = '9999';
+
+            const toastEl = document.createElement('div');
+            toastEl.className = 'toast';
+            toastEl.setAttribute('role', 'alert');
+            toastEl.setAttribute('aria-live', 'assertive');
+            toastEl.setAttribute('aria-atomic', 'true');
+            toastEl.innerHTML = `
+                <div class="toast-header">
+                    <strong class="me-auto">Notification</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    ${message}
+                </div>
+            `;
+
+            toastContainer.appendChild(toastEl);
+            document.body.appendChild(toastContainer);
+
+            // Initialize and show toast
+            const toast = new bootstrap.Toast(toastEl, {
+                autohide: true,
+                delay: 3000
+            });
+            toast.show();
+
+            // Remove toast element after it's hidden
+            toastEl.addEventListener('hidden.bs.toast', function () {
+                document.body.removeChild(toastContainer);
+            });
+        }
+    </script>
+</body>
+
+
+
+<!-- Email Modal -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel">Change Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="edit-form" id="emailForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" value="Jhanvi@gmail.com">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn save-btn text-white" onclick="saveEmail()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Phone Modal -->
+<div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="phoneModalLabel">Change Phone</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="edit-form" id="phoneForm">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" value="8980252445">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn save-btn text-white" onclick="savePhone()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Password Modal -->
+<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="passwordModalLabel">Change Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="edit-form" id="passwordForm">
+                    <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Current Password</label>
+                        <input type="password" class="form-control" id="currentPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="newPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirmPassword">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn save-btn text-white" onclick="savePassword()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Address Modal -->
+<div class="modal fade" id="editAddressModal" tabindex="-1" aria-labelledby="editAddressModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editAddressModalLabel">Edit Address</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="edit-form" id="addressForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="addressName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="addressName" value="Jhanvi Shah">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="addressPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="addressPhone" value="8980252445">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addressLine1" class="form-label">Address Line 1</label>
+                        <input type="text" class="form-control" id="addressLine1" value="1/4 Pragatinagar Flats">
+                    </div>
+                    <div class="mb-3">
+                        <label for="addressLine2" class="form-label">Address Line 2</label>
+                        <input type="text" class="form-control" id="addressLine2"
+                            value="opp. jain derasar, near Jain derasar">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" value="Ahmedabad">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" value="Gujarat">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="zipCode" class="form-label">Zip/Postal Code</label>
+                            <input type="text" class="form-control" id="zipCode" value="380052">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Address Type</label>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addressType" id="typeHome"
+                                    value="Home" checked>
+                                <label class="form-check-label" for="typeHome">
+                                    Home
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addressType" id="typeOffice"
+                                    value="Office">
+                                <label class="form-check-label" for="typeOffice">
+                                    Office
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addressType" id="typeOther"
+                                    value="Other">
+                                <label class="form-check-label" for="typeOther">
+                                    Other
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="defaultBilling">
+                            <label class="form-check-label" for="defaultBilling">
+                                Set as default billing address
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="defaultShipping">
+                            <label class="form-check-label" for="defaultShipping">
+                                Set as default shipping address
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn save-btn text-white" onclick="saveAddress()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</script>
+</body>

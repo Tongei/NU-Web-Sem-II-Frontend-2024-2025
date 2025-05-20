@@ -70,14 +70,36 @@
 
 .signin-content{
     /* height: 89.5% !important; */
-    height: 93.2vh !important;
+    height: 90vh !important;
 }
 
 .signin-content .main-right{
   border-top: grey solid 0.3px !important;
 }
 
+:root {
+    --primary-color: #8A33FD;
+}
 
+.primary-color {
+    background: var(--primary-color) !important;
+}
+
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+
+.border-primary-color {
+    border-color: var(--primary-color) !important;
+}
+.btn-hover:hover {
+    outline: 1px solid var(--primary-color);
+    transition: .3s;
+}
+
+.btn-outline-light {
+    outline: 1px solid white;
+}
 .img-left{
   background: url("../../assets/images/auth/signin-left.png");
   background-repeat: no-repeat;
@@ -89,7 +111,7 @@
 
 @media (min-width : 769px) {
   .right-side{
-    padding: 100px 80px !important;
+    padding: 80px 80px !important;
   }
 }
 

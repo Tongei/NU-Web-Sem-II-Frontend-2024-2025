@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Orders</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="../../vendor/bootstrap/js/bootstrap.bundle.min.js"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/profile/my-order.css">
+    
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Eup<span>horia</span></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="pt-3">
+                    <li><a href="../home_Page.html">Shop</a></li>
+                    <li><a href="../product-man.html">Men</a></li>
+                    <li><a href="../product-list.html">Women</a></li>
+                    <li><a href="#">Combos</a></li>
+                    <li><a href="#">Joggers</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icon">
+                    <p onclick="return location.href = '../wishlist.html'"><i class="fa-regular fa-heart"></i></p>
+                    <p><i class="fa-solid fa-user"></i></p>
+                    <p onclick="return location.href = '../card.html'"><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+    </header>
+    <main class="add-address">
+        <div class="container py-4">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">My Account</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Delivery Address</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <!-- Left Column - Sidebar -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h1 class="section-header h4 mb-2">Hello Jhanvi</h1>
+                    <p class="welcome-text mb-4">Welcome to your Account</p>
+
+                    <div class="sidebar mb-4">
+                        <a href="./my-order.html" class="sidebar-link active-menu">
+                            <i class="bi bi-box-seam menu-icon"></i> My orders
+                        </a>
+                        <a href="../wishlist.html" class="sidebar-link">
+                            <i class="bi bi-heart menu-icon"></i> Wishlist
+                        </a>
+                        <a href="../add-address.html" class="sidebar-link">
+                            <i class="bi bi-person menu-icon"></i> My info
+                        </a>
+                        <a href="../auth/signin.html" class="sidebar-link">
+                            <i class="bi bi-box-arrow-right menu-icon"></i> Sign out
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="col-lg-9">
+                    <h2 class="section-header h4 mb-4">My Orders</h2>
+                    <div class="container mt-5">
+                      <!-- Nav Tabs -->
+                      <ul class="nav nav-tabs text-black d-flex justify-content-between" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active text-black fw-semibold fs-5" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">
+                            Active
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link text-black fw-semibold fs-5" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">
+                            Cancelled
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link text-black fw-semibold fs-5" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">
+                            Completed
+                          </button>
+                        </li>
+                      </ul>
+                    
+                      <!-- Tab Panes -->
+                      <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                          <!-- Wishlist Content -->
+                            <div class="col-lg-12">
+                                <div class="account-content">
+                                    <h2 class="mb-4">Active</h2>
+                                    <!-- Wishlist Item 1 -->
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/Rectangle 20 from SAD-Ecom (1).png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/boxers.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/jeans.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab2" role="tabpanel">
+                           <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                          <!-- Wishlist Content -->
+                            <div class="col-lg-12">
+                                <div class="account-content">
+                                    <h2 class="mb-4">Cancelled</h2>
+                                    <!-- Wishlist Item 1 -->
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/blackie.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/boxers.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/jeans.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3" role="tabpanel">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                          <!-- Wishlist Content -->
+                            <div class="col-lg-12">
+                                <div class="account-content">
+                                    <h2 class="mb-4">Completed</h2>
+                                    <!-- Wishlist Item 1 -->
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/coat.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/mic.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row border-bottom py-3 my-3">
+                                        <div class="col-12">
+                                            <div class="p-3 content rounded-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <p class="title-order">
+                                                            <span class="fs-4">Order n:#12345674</span> <br> <br>
+                                                            <span class="text-secondary">Order date: 2 June, 2025 2:40PM</span> <br>
+                                                            <span class="text-secondary">Estimated delivery: 8 June, 2025</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="pt-5 float-end">
+                                                            <span class="text-secondary">Order status: In Progressed</span> <br>
+                                                            <span class="text-secondary">
+                                                                Payment method: Cash on delivery
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wishlist-item">
+                                                <img src="../../assets/images/homepage/lavender.png" alt="Blue Flower Print Crop Top" class="wishlist-img">
+                                                <div class="wishlist-details">
+                                                    <h5>Blue Flower Print Crop Top</h5>
+                                                    <p class="wishlist-meta">Color: Pink<br>QTY: 1 <br> Total: $29.00</p>
+                                                </div>
+                                                <div class="wishlist-actions d-flex align-items-center">
+                                                    <button class="btn-add-to-cart" onclick="location.href = './my-order-detail.html'">View Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-info">
+                <div class="Need-help">
+                    <h2>Need Help</h2>
+                    <p>Contact Us</p>
+                    <p>Track Order</p>
+                    <p>Returns & Refunds</p>
+                    <p>FAQ's</p>
+                    <p>Career</p>
+                </div>
+
+                <div class="Company">
+                    <h2>Company</h2>
+                    <p>About Us</p>
+                    <p>Euphoria Blog</p>
+                    <p>Euphoriastan</p>
+                    <p>Collaboration</p>
+                    <p>Media</p>
+                </div>
+
+                <div class="More Info">
+                    <h2>More Info</h2>
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Shipping Policy</p>
+                    <p>Sitemap</p>
+                </div>
+
+                <div class="Location">
+                    <h2>Location</h2>
+                    <p>support@euphoria.in</p>
+                    <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+                    <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+                </div>
+            </div>
+
+            <div class="download-app">
+                <h2>Download The App</h2>
+                <div class="icon">
+                    <p><i class="fa-brands fa-facebook"></i></p>
+                    <p><i class="fa-brands fa-google-play"></i></p>
+                    <p><i class="fa-brands fa-square-twitter"></i></p>
+                    <p><i class="fa-brands fa-linkedin"></i></p>
+                </div>
+            </div>
+
+            <hr />
+            <h3>Popular</h3><br />
+            <h3>Categories</h3>
+            <hr />
+            <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fc70647351.js" crossorigin="anonymous"></script></body>
+
+</html>

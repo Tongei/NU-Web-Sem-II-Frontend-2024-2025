@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Address</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Eup<span>horia</span></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="pt-3">
+                    <li><a href="./home_Page.html">Shop</a></li>
+                    <li><a href="./product-man.html">Men</a></li>
+                    <li><a href="./product-list.html">Women</a></li>
+                    <li><a href="#">Combos</a></li>
+                    <li><a href="#">Joggers</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icon">
+                    <p onclick="return location.href = './wishlist.html'"><i class="fa-regular fa-heart"></i></p>
+                    <p onclick="return location.href = './profile/my-order.html'"><i class="fa-solid fa-user"></i></p>
+                    <p onclick="return location.href = './card.html'"><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+    </header>
+    <main class="add-address">
+        <div class="container py-4">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">My Account</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Delivery Address</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <!-- Left Column - Sidebar -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h1 class="section-header h4 mb-2">Hello Jhanvi</h1>
+                    <p class="welcome-text mb-4">Welcome to your Account</p>
+
+                    <div class="sidebar mb-4">
+                        <a href="./profile/my-order.html" class="sidebar-link">
+                            <i class="bi bi-box-seam menu-icon"></i> My orders
+                        </a>
+                        <a href="./wishlist.html" class="sidebar-link">
+                            <i class="bi bi-heart menu-icon"></i> Wishlist
+                        </a>
+                        <a href="#" class="sidebar-link active-menu">
+                            <i class="bi bi-person menu-icon"></i> My info
+                        </a>
+                        <a href="./auth/signin.html" class="sidebar-link">
+                            <i class="bi bi-box-arrow-right menu-icon"></i> Sign out
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="col-lg-9">
+                    <h2 class="section-header h4 mb-4">My Info</h2>
+                    <h3 class="h5 mb-4">Add Address</h3>
+
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="firstName" class="form-label">First Name*</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name*</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="country" class="form-label">Country / Region*</label>
+                                <input type="text" class="form-control" id="country" placeholder="Country / Region"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company" placeholder="Company (optional)">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="street" class="form-label">Street Address*</label>
+                                <input type="text" class="form-control" id="street"
+                                    placeholder="House number and street name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="apt" class="form-label">Apt, suite, unit</label>
+                                <input type="text" class="form-control" id="apt"
+                                    placeholder="Apartment, suite, unit, etc. (optional)">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="city" class="form-label">City*</label>
+                                <input type="text" class="form-control" id="city" placeholder="Town / City" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="state" class="form-label">State*</label>
+                                <select class="form-select" id="state" required>
+                                    <option selected disabled value="">State</option>
+                                    <option>Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>Arizona</option>
+                                    <!-- Add other states as needed -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="phone" class="form-label">Phone*</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="postal" class="form-label">Postal Code*</label>
+                                <input type="text" class="form-control" id="postal" placeholder="Postal Code" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="instructions" class="form-label">Delivery Instruction</label>
+                            <textarea class="form-control" id="instructions"
+                                placeholder="Delivery Instruction"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="defaultShipping">
+                                <label class="form-check-label" for="defaultShipping">
+                                    Set as default shipping address
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="defaultBilling">
+                                <label class="form-check-label" for="defaultBilling">
+                                    Set as default billing address
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-light">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-info">
+                <div class="Need-help">
+                    <h2>Need Help</h2>
+                    <p>Contact Us</p>
+                    <p>Track Order</p>
+                    <p>Returns & Refunds</p>
+                    <p>FAQ's</p>
+                    <p>Career</p>
+                </div>
+
+                <div class="Company">
+                    <h2>Company</h2>
+                    <p>About Us</p>
+                    <p>Euphoria Blog</p>
+                    <p>Euphoriastan</p>
+                    <p>Collaboration</p>
+                    <p>Media</p>
+                </div>
+
+                <div class="More Info">
+                    <h2>More Info</h2>
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Shipping Policy</p>
+                    <p>Sitemap</p>
+                </div>
+
+                <div class="Location">
+                    <h2>Location</h2>
+                    <p>support@euphoria.in</p>
+                    <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+                    <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+                </div>
+            </div>
+
+            <div class="download-app">
+                <h2>Download The App</h2>
+                <div class="icon">
+                    <p><i class="fa-brands fa-facebook"></i></p>
+                    <p><i class="fa-brands fa-google-play"></i></p>
+                    <p><i class="fa-brands fa-square-twitter"></i></p>
+                    <p><i class="fa-brands fa-linkedin"></i></p>
+                </div>
+            </div>
+
+            <hr />
+            <h3>Popular</h3><br />
+            <h3>Categories</h3>
+            <hr />
+            <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fc70647351.js" crossorigin="anonymous"></script></body>
+
+</html>

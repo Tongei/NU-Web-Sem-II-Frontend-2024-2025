@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/Product-detail.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+     <div class="conatiner">
+      <!-- -----navbar----- -->
+      <div class="navbar">
+        <div class="logo">
+          <h1>Eup<span>horia</span></h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="pt-3">
+            <li><a href="./home_Page.html">Shop</a></li>
+            <li><a href="./product-man.html">Men</a></li>
+            <li><a href="./product-list.html">Women</a></li>
+            <li><a href="#">Combos</a></li>
+            <li><a href="#">Joggers</a></li>
+          </ul>
+          <div class="search-bar">
+            <input type="text"  placeholder="Search...     " >
+          </div>
+          <div class="icon">
+            <p onclick="return location.href = './wishlist.html'"><i class="fa-regular fa-heart"></i></p>
+                    <p onclick="return location.href = './profile/my-order.html'"><i class="fa-solid fa-user"></i></p>
+                    <p onclick="return location.href = './card.html'"><i class="fa-solid fa-cart-shopping"></i></p>
+          </div>
+        </div>
+      </div>
+    
+      <!----main----->
+      <section class="main">
+        <div data-aos="fade-right" style="overflow: hidden;">
+          <div class="main-content">
+            <div class="show-product" >
+                      <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" onmouseover="change()">
+                      <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg"  onmouseover="change_1()">
+                      <img src="https://i.pinimg.com/736x/ce/23/ed/ce23edb7943ca7f74ef3af2afbb98b93.jpg"  onmouseover="change_2()">
+                      <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" onmouseover="change_3()">
+            </div>
+            <div class="detail">
+                      <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" id="img" alt="">
+            </div>
+          </div>
+        </div>
+        <!----info---->
+        <div data-aos="fade-left" style="overflow: hidden;">
+          <div  class="info">
+              <nav class="breadcrumb">
+                <a href="#">Shop</a> &gt; <a href="#">Women</a> &gt; <span>Top</span>
+              </nav>
+          
+              <h1 class="product-title">
+                <a href="#">Raven Hoodie With<br>Black colored Design</a>
+              </h1>
+          
+              <div class="rating">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span>3.5</span>
+                <span class="comments">💬 120 comment</span>
+              </div>
+          
+              <div class="size-section">
+                <strong>Select Size</strong>
+                <a href="#" class="size-guide">Size Guide →</a>
+                <div class="sizes">
+                  <button>XS</button>
+                  <button>S</button>
+                  <button>M</button>
+                  <button class="selected">L</button>
+                  <button>XL</button>
+                </div>
+              </div>
+          
+              <div class="color-section">
+                <strong>Colours Available</strong>
+                <div class="colors">
+                  <span class="color black selected"></span>
+                  <span class="color yellow"></span>
+                  <span class="color pink"></span>
+                  <span class="color red"></span>
+                </div>
+              </div>
+          
+              <div class="actions">
+                <button class="add-cart">🛒 Add to cart</button>
+                <div class="price">$63.00</div>
+              </div>
+              <hr />
+              <div class="features">
+                <div><span>🛡️</span> Secure payment</div>
+                <div><span>📏</span> Size & Fit</div>
+                <div><span>🚚</span> Free shipping</div>
+                <div><span>🔁</span> Free Shipping & Returns</div>
+              </div>
+            
+          </div> 
+        </div>
+      </section> <br><br>
+
+      <!-- ------more-info----- -->
+    <div data-aos="flip-down">
+    <section class="more-info">
+      <div class="left">
+        <h2><span class="highlight-bar"></span> Product Description</h2>
+        <div class="tabs">
+          <button class="tab active">Description</button>
+          <button class="tab">User comments</button>
+          <button class="tab with-icon">
+            <span class="icon">💬</span> Question & Answer
+            <span class="badge">4</span>
+          </button>
+        </div>
+        <p class="description">
+          Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with no pilling & no fading. Provide all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.
+        </p>
+        <div class="specs">
+          <div class="spec-item">
+            <div class="label">Fabric</div>
+            <div class="value">Bio-washed Cotton</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Pattern</div>
+            <div class="value">Printed</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Fit</div>
+            <div class="value">Regular-fit</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Neck</div>
+            <div class="value">Round Neck</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Sleeve</div>
+            <div class="value">Half-sleeves</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Style</div>
+            <div class="value">Casual Wear</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right">
+        <div class="video-card">
+          <div class="video-time">1:00 M</div>
+          <img src="https://img.youtube.com/vi/IfWYDcVfBVo/maxresdefault.jpg" alt="Raven Hoodie" class="product-img">
+          <a href="https://www.youtube.com/watch?v=IfWYDcVfBVo" target="_blank">
+            <button class="play-button">▶</button>
+          </a>
+          <div class="video-caption">Raven Hoodie with black colored design</div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <!-- ---items--- -->
+    <section class="item">
+      <div data-aos="flip-left" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" alt="">
+        </div>
+      </div>
+
+      <div data-aos="flip-right" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/ce/23/ed/ce23edb7943ca7f74ef3af2afbb98b93.jpg" alt="">
+        </div>
+      </div>
+
+      <div data-aos="flip-left" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" alt="">
+        </div>
+      </div>
+
+      <div data-aos="flip-right" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- Repeat for more rows -->
+      <div data-aos="flip-left" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" alt="">
+        </div>
+      </div>
+
+      <div data-aos="flip-right" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/ce/23/ed/ce23edb7943ca7f74ef3af2afbb98b93.jpg" alt="">
+        </div>
+      </div>
+
+      <div data-aos="flip-left" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" alt="">
+        </div>
+      </div>
+
+      <div data-aos="flip-right" style="overflow: hidden;">
+        <div class="item-1">
+          <p><i class="fa-regular fa-heart"></i></p>
+          <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ----Footer ----- -->
+    <section class="footer">
+      <div class="footer">
+        <div class="footer-info">
+          <div class="Need-help">
+            <h2>Need Help</h2>
+            <p>Contact Us</p>
+            <p>Track Order</p>
+            <p>Returns & Refunds</p>
+            <p>FAQ's</p>
+            <p>Career</p>
+          </div>
+  
+          <div class="Company">
+            <h2>Company</h2>
+            <p>About Us</p>
+            <p>Euphoria Blog</p>
+            <p>Euphoriastan</p>
+            <p>Collaboration</p>
+            <p>Media</p>
+          </div>
+  
+          <div class="More Info">
+            <h2>More Info</h2>
+            <p>Terms and Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Shipping Policy</p>
+            <p>Sitemap</p>
+          </div>
+  
+          <div class="Location">
+            <h2>Location</h2>
+            <p>support@euphoria.in</p>
+            <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+            <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+          </div>
+        </div>
+  
+        <div class="download-app">
+          <h2>Download The App</h2>
+          <div class="icon">
+            <p><i class="fa-brands fa-facebook"></i></p>
+            <p><i class="fa-brands fa-google-play"></i></p>
+            <p><i class="fa-brands fa-square-twitter"></i></p>
+            <p><i class="fa-brands fa-linkedin"></i></p>
+          </div>
+        </div>
+  
+        <hr />
+        <h3>Popular</h3><br />
+        <h3>Categories</h3>
+        <hr />
+        <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+      </div>
+    </section>
+   
+ </div>        
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+<script>
+  function change(){
+      let pic = "https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg";
+      document.getElementById('img').setAttribute('src',pic);
+
+  }
+
+  function change_1(){
+      let pic_1 ="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg";
+      document.getElementById('img').setAttribute('src',pic_1);
+  }
+
+  function change_2(){
+      let pic_2 = "https://i.pinimg.com/736x/ce/23/ed/ce23edb7943ca7f74ef3af2afbb98b93.jpg";
+      document.getElementById('img').setAttribute('src',pic_2);
+  }
+
+  function change_3(){
+      let pic_3 = "https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg";
+      document.getElementById('img').setAttribute('src',pic_3);
+  }
+  AOS.init();
+</script>
+</html>
+
+
+
+ 

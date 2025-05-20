@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/product-list.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="conatiner">
+         <!-- -----navbar----- -->
+        <div class="navbar">
+            <div class="logo">
+            <h1>Eup<span>horia</span></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="./home_Page.html">Shop</a></li>
+                <li><a href="./product-man.html">Men</a></li>
+                <li><a class="active" href="#">Women</a></li>
+                <li><a href="#">Combos</a></li>
+                <li><a href="#">Joggers</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text"  placeholder="Search...     " >
+            </div>
+            <div class="icon">
+                <p onclick="return location.href = './wishlist.html'"><i class="fa-regular fa-heart"></i></p>
+                    <p onclick="return location.href = './profile/my-order.html'"><i class="fa-solid fa-user"></i></p>
+                    <p onclick="return location.href = './card.html'"><i class="fa-solid fa-cart-shopping"></i></p>
+            </div>
+            </div>
+        </div>
+        <!-- ---main content--- -->
+        <section class="main_content">
+            <!-- ----right---- -->
+            <div class="right">
+                <aside class="filter-sidebar">
+                    <!-- Filter Title -->
+                    <div class="filter-section">
+                    <h3>Filter <span>⛭</span></h3>
+                    <ul>
+                        <li>Tops <span>›</span></li>
+                        <li>Printed T-shirts <span>›</span></li>
+                        <li>Plain T-shirts <span>›</span></li>
+                        <li>Kurti <span>›</span></li>
+                        <li>Boxers <span>›</span></li>
+                        <li>Full sleeve T-shirts <span>›</span></li>
+                        <li>Joggers <span>›</span></li>
+                        <li>Payjamas <span>›</span></li>
+                        <li>Jeans <span>›</span></li>
+                    </ul>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-section">
+                    <h3>Price <span>⌄</span></h3>
+                    <input type="range" min="0" max="700" value="70" class="range-slider">
+                    <input type="range" min="0" max="700" value="600" class="range-slider">
+                    <div class="range-values">
+                        <input type="text" value="$70">
+                        <input type="text" value="$600">
+                    </div>
+                    </div>
+
+                    <!-- Colors -->
+                    <div class="filter-section">
+                    <h3>Colors <span>⌄</span></h3>
+                    <div class="color-grid">
+                        <div class="color-item" style="background-color: purple;"></div>
+                        <div class="color-item" style="background-color: black;"></div>
+                        <div class="color-item" style="background-color: red;"></div>
+                        <div class="color-item" style="background-color: orange;"></div>
+                        <div class="color-item" style="background-color: blue;"></div>
+
+                        <div class="color-item" style="background-color: navy;"></div>
+                        <div class="color-item" style="background-color: white; border: 1px solid #ccc;"></div>
+                        <div class="color-item" style="background-color: brown;"></div>
+                        <div class="color-item" style="background-color: green;"></div>
+                        <div class="color-item" style="background-color: yellow;"></div>
+
+                        <div class="color-item" style="background-color: gray;"></div>
+                        <div class="color-item" style="background-color: pink;"></div>
+                        <div class="color-item" style="background-color: lightblue;"></div>
+                        <div class="color-item" style="background-color: rgb(204, 102, 119);"></div>
+                        <div class="color-item" style="background-color: rgb(188, 230, 173);"></div>
+                    </div>
+                    </div>
+
+                    <!-- Size -->
+                    <div class="filter-section">
+                    <h3>Size <span>⌄</span></h3>
+                    <div class="size-grid">
+                        <div class="size-option">XXS</div>
+                        <div class="size-option">XL</div>
+                        <div class="size-option">XS</div>
+                        <div class="size-option">S</div>
+                        <div class="size-option">M</div>
+                        <div class="size-option">L</div>
+                        <div class="size-option">XXL</div>
+                        <div class="size-option">3XL</div>
+                    </div>
+                    </div>
+
+                    <!-- Dress Style -->
+                    <div class="filter-section">
+                    <h3>Dress Style <span>⌄</span></h3>
+                    <ul>
+                        <li>Casual <span>›</span></li>
+                        <li>Co-ord <span>›</span></li>
+                        <li>Business <span>›</span></li>
+                        <li>Sport <span>›</span></li>
+                        <li>Elegant <span>›</span></li>
+                        <li>Formal (evenings) <span>›</span></li>
+                    </ul>
+                    </div>
+                </aside>
+            </div>
+            <!-- ----left---- -->
+            <div class="left">
+                <div class="title">
+                    <h3>Women's clothing</h3>
+                    <h3><span>New       </span>Recommented</h3>
+                </div>
+                <div class="all_items">
+                    <div onclick="return location.href='Product-detail.html'" class="item-border">
+                        <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" alt="Product_2">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div onclick="return location.href='Product-detail.html'" class="item-border">
+                        <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" alt="Product_1">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div onclick="return location.href='Product-detail.html'" class="item-border">
+                        <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" alt="Product_3">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ---repeat--- -->
+                <div class="all_items">
+                    <div onclick="return location.href='Product-detail.html'" class="item-border">
+                        <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" alt="Product_2">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div onclick="return location.href='Product-detail.html'" class="item-border">
+                        <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" alt="Product_1">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div onclick="return location.href='Product-detail.html'" class="item-border">
+                        <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" alt="Product_3">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="return location.href='Product-detail.html'" class="all_items">
+                    <div class="item-border">
+                        <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" alt="Product_2">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div class="item-border">
+                        <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" alt="Product_1">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div class="item-border">
+                        <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" alt="Product_3">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                </div>
+                      <div class="all_items">
+                    <div class="item-border">
+                        <img src="https://i.pinimg.com/736x/51/31/f9/5131f9fb4ef46f5d5e8f2f6182d0625f.jpg" alt="Product_2">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div class="item-border">
+                        <img src="https://i.pinimg.com/736x/a0/72/8d/a0728d138c399b9a021a51870027eb86.jpg" alt="Product_1">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                    <div class="item-border">
+                        <img src="https://i.pinimg.com/736x/29/45/9c/29459c09a6dc575aa29ddb80c99d6270.jpg" alt="Product_3">
+                        <div class="detail">
+                            <div class="detail-info">
+                                <h4>T-Shirt</h4>
+                                <p>Helen'brand</p>
+                            </div>
+                            <button>$11.99</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- ---info--- -->
+        <section class="info">
+                <h1>Clothing for Women Online in India</h1>
+                <p><span class="section-title">Reexplore Women's Clothing Collection Online at Euphoria</span></p>
+                <p>Women's Clothing - Are you searching for the best website to buy Clothing for Women online in India? Well, your search for the coolest and most stylish women's clothing ends here. From Trendy Casual Womens Wear Online shopping to premium quality cotton women's apparel, Euphoria has closets of Women Collection covered with the latest and best designs of Women's Clothing Online.</p>
+                <p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear.</p>
+
+                <h2>One-Stop Destination to Shop Every Clothing for Women: Euphoria</h2>
+                <p>Today, Clothing for Women is gaining more popularity above all. This is because gone are the days when women were used to carrying uncomfortable fashion. Today, a lady looks prettier when she is in Casual Womens Wear which is a comfortable outfit. Concerning this, Euphoria has a big fat range of Stylish Women's Clothing that would make her the winner wherever she goes.</p>
+                <p>Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. It is quite evident to say that there are very few Womens Clothing online stores where you can buy Western Wear for Women comprising the premium material and elegant design that you are always seeking for. Basically,</p>
+                <p><a href="#" class="see-more">See More</a></p>
+
+                <h2><span class="section-title">Buy Women's Clothing at Best Price</span></h2>
+
+                <table class="clothing-table">
+                    <thead>
+                        <tr>
+                            <th>Women's Clothing</th>
+                            <th>Best Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pick Any 4 - Womens Plain T-shirt Combo</td>
+                            <td>₹1099</td>
+                        </tr>
+                        <tr>
+                            <td>Pick Any 4 - Plain Womens Boxer Combo</td>
+                            <td>₹1099</td>
+                        </tr>
+                        <tr>
+                            <td>Pick Any 4 - Women Plain Full Sleeve T-shirt Combo</td>
+                            <td>₹1399</td>
+                        </tr>
+                        <tr>
+                            <td>Multicolor Checkered Long Casual Shirts for Women</td>
+                            <td>₹499</td>
+                        </tr>
+                        <tr>
+                            <td>Pick Any 2: Plain Boxy Casual Shirts for Women Combo</td>
+                            <td>₹799</td>
+                        </tr>
+                        <tr>
+                            <td>Blue Floral Anarkali Kurti</td>
+                            <td>₹599</td>
+                        </tr>
+                        <tr>
+                            <td>Jade Black Narrow Cut Flexible Women Jeggings</td>
+                            <td>₹998</td>
+                        </tr>
+                        <tr>
+                            <td>Mustard-yellow Solid Straight-Fit Women Pant</td>
+                            <td>₹499</td>
+                        </tr>
+                        <tr>
+                            <td>Women Pants Combo - Pick Any 2</td>
+                            <td>₹800</td>
+                        </tr>
+                        <tr>
+                            <td>Pista Green Solid Boxy Casual Shirts for Women</td>
+                            <td>₹449</td>
+                        </tr>
+                        <tr>
+                            <td>Plain Burgundy Womens Boxer</td>
+                            <td>₹549</td>
+                        </tr>
+                        <tr>
+                            <td>Striped Front Tie Casual Shirts for Women</td>
+                            <td>₹449</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+        </section>
+        
+         <!-- ----Footer ----- -->
+        <section class="footer">
+        <div class="footer">
+            <div class="footer-info">
+            <div class="Need-help">
+                <h2>Need Help</h2>
+                <p>Contact Us</p>
+                <p>Track Order</p>
+                <p>Returns & Refunds</p>
+                <p>FAQ's</p>
+                <p>Career</p>
+            </div>
+    
+            <div class="Company">
+                <h2>Company</h2>
+                <p>About Us</p>
+                <p>Euphoria Blog</p>
+                <p>Euphoriastan</p>
+                <p>Collaboration</p>
+                <p>Media</p>
+            </div>
+    
+            <div class="More Info">
+                <h2>More Info</h2>
+                <p>Terms and Conditions</p>
+                <p>Privacy Policy</p>
+                <p>Shipping Policy</p>
+                <p>Sitemap</p>
+            </div>
+    
+            <div class="Location">
+                <h2>Location</h2>
+                <p>support@euphoria.in</p>
+                <p>Eklingpura Chouraha, Ahmedabad Main Road</p>
+                <p>(NH 8-Near Mahadev Hotel), Udaipur, India-313002</p>
+            </div>
+            </div>
+    
+            <div class="download-app">
+            <h2>Download The App</h2>
+            <div class="icon">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-google-play"></i></p>
+                <p><i class="fa-brands fa-square-twitter"></i></p>
+                <p><i class="fa-brands fa-linkedin"></i></p>
+            </div>
+            </div>
+    
+            <hr />
+            <h3>Popular</h3><br />
+            <h3>Categories</h3>
+            <hr />
+            <p id="resered">© 2023 Euphoria. All rights reserved.</p>
+        </div>
+        </section> 
+    
+    </div>        
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
