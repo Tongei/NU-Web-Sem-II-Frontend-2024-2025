@@ -26,10 +26,10 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
+                <ul class="pt-3">
+                    <li><a href="../home_Page.html">Shop</a></li>
+                    <li><a href="../product-man.html">Men</a></li>
+                    <li><a href="../product-list.html">Women</a></li>
                     <li><a href="#">Combos</a></li>
                     <li><a href="#">Joggers</a></li>
                 </ul>
@@ -37,9 +37,9 @@
                     <input type="text" placeholder="Search...">
                 </div>
                 <div class="icon">
-                    <p><i class="fa-regular fa-heart"></i></p>
+                    <p onclick="return location.href = '../wishlist.html'"><i class="fa-regular fa-heart"></i></p>
                     <p><i class="fa-solid fa-user"></i></p>
-                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                    <p onclick="return location.href = '../card.html'"><i class="fa-solid fa-cart-shopping"></i></p>
                 </div>
             </div>
         </div>
@@ -71,16 +71,16 @@
                     <p class="welcome-text mb-4">Welcome to your Account</p>
 
                     <div class="sidebar mb-4">
-                        <a href="#" class="sidebar-link active-menu">
+                        <a href="./my-order.html" class="sidebar-link active-menu">
                             <i class="bi bi-box-seam menu-icon"></i> My orders
                         </a>
-                        <a href="#" class="sidebar-link">
+                        <a href="../wishlist.html" class="sidebar-link">
                             <i class="bi bi-heart menu-icon"></i> Wishlist
                         </a>
                         <a href="#" class="sidebar-link">
                             <i class="bi bi-person menu-icon"></i> My info
                         </a>
-                        <a href="#" class="sidebar-link">
+                        <a href="../auth/signin.html" class="sidebar-link">
                             <i class="bi bi-box-arrow-right menu-icon"></i> Sign out
                         </a>
                     </div>
@@ -88,7 +88,7 @@
 
                 <!-- Right Column - Content -->
                 <div class="col-lg-9">
-                    <h2 class="section-header mb-4"> <span><i class="fa-solid fa-chevron-left"></i></span> Orders Detail</h2>
+                    <h2 class="section-header mb-4" onclick="location.history.back()"> <span><i class="fa-solid fa-chevron-left"></i></span> Orders Detail</h2>
                     <div class="col-12">
                         <div class="p-3 content rounded-3">
                             <div class="row">
